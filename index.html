@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+       .circle {
+      position: fixed;
+      width: 150px;
+      height: 150px;
+      background-color: rgba(0, 31, 63, 0.3);
+      border-radius: 50%;
+      animation: moveCircle 15s infinite alternate ease-in-out, floatUpDown 5s infinite ease-in-out;
+      z-index: -1;
+      transition: background-color 1s ease-in-out;
+    }
+
+    .circle1 {
+      top: 10%;
+      left: 10%;
+    }
+
+    .circle2 {
+      top: 70%;
+      right: 10%;
+      animation-delay: 2s;
+    }
+    
+  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigma AI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="circle circle1"></div>
+<div class="circle circle2"></div>
+    <div class="chat-container">
+        <div class="chat-header">Sigma AI</div>
+        <div id="chat-box" class="chat-box"></div>
+        <div class="chat-input-container">
+            <input type="text" id="user-input" placeholder="Type a message..." autocomplete="off">
+            <button id="send-btn">➤</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

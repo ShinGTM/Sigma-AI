@@ -1,0 +1,115 @@
+/* ChatGPT-like design */
+body {
+    background: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Chat Container */
+.chat-container {
+    width: 420px;
+    height: 80vh;
+    background: #1E1E1E;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.chat-header {
+    background: #0D47A1;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Chat Box */
+.chat-box {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Chat Bubbles */
+.chat-message {
+    max-width: 75%;
+    padding: 10px 14px;
+    border-radius: 15px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    display: inline-block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* User Messages */
+.user {
+    align-self: flex-end;
+    background: #2979FF;
+    color: white;
+}
+
+/* AI Messages */
+.bot {
+    align-self: flex-start;
+    background: #303F9F;
+    color: white;
+}
+
+/* Typing Indicator */
+.typing {
+    align-self: flex-start;
+    background: #303F9F;
+    color: white;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+/* Input Area */
+.chat-input-container {
+    display: flex;
+    padding: 12px;
+    background: #222;
+}
+
+input {
+    flex-grow: 1;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+button {
+    margin-left: 10px;
+    padding: 10px 14px;
+    background: #2979FF;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1E88E5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
